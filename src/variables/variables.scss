@@ -1,0 +1,21 @@
+$text-color-primary: #212121;
+$color-secondary: #4971c6;
+$color-secondary-active: #112f72;
+$color-secondary-hover: #3c6ee1;
+$section-color-primary: #efeeed;
+$background-color: #ffff;
+
+$text-color-primary-dark: #ffff;
+$section-color-primary-dark: #bdbcbb;
+$background-color-dark: #212121;
+
+$themes: (
+  light: (
+    my-class-bg: $background-color,
+    text-color: $text-color-primary,
+  ),
+  dark: (
+    my-class-bg: $background-color-dark,
+    text-color: $text-color-primary-dark,
+  ),
+);

@@ -1,0 +1,41 @@
+@import "../../variables/variables.scss";
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.75em;
+  background-color: $color-secondary;
+  color: $section-color-primary;
+  font-size: 1.25rem;
+
+  .nav-left {
+    display: flex;
+
+    .nav-link {
+      padding: 0;
+    }
+  }
+
+  .nav-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5em;
+  border-radius: 0.5em;
+
+  .link-item {
+    margin-left: 0.25em;
+  }
+}
+
+.nav-link + .nav-link {
+  margin-left: 0.25em;
+}

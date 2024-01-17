@@ -1,0 +1,100 @@
+@import "../../variables/variables.scss";
+
+.card-container {
+  padding: 1em;
+  background: $section-color-primary;
+  border-radius: 25px;
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: space-between;
+
+  .card-title {
+    font-size: large;
+    font-weight: normal;
+    margin-bottom: 0.25em;
+    color: $text-color-primary;
+  }
+
+  .card-stock {
+    font-size: medium;
+    font-weight: lighter;
+    margin-bottom: 0.25em;
+    color: $text-color-primary;
+  }
+
+  .card-price {
+    font-size: larger;
+    font-weight: normal;
+    letter-spacing: 1px;
+    color: $text-color-primary;
+  }
+
+  .card-actions {
+    display: flex;
+    justify-content: flex-end;
+
+    .card-action-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .card-quantity {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5em;
+        background-color: white;
+        padding: 0.25em 1em;
+        border-radius: 25px;
+        color: $text-color-primary;
+
+        .card-button-quantity {
+          display: flex;
+          align-self: center;
+          background: none;
+          color: inherit;
+          border: none;
+          padding: 0;
+          font: inherit;
+          cursor: pointer;
+          outline: inherit;
+        }
+
+        p {
+          text-align: center;
+          width: 20px;
+        }
+      }
+    }
+
+    .card-button {
+      padding: 0.5em 0.75em;
+      border-radius: 25px;
+      background-color: $color-secondary;
+      cursor: pointer;
+      color: white;
+      border: none;
+      outline: inherit;
+      font-size: medium;
+
+      &:active {
+        background-color: $color-secondary-active;
+      }
+
+      &:hover {
+        background-color: $color-secondary-hover;
+      }
+    }
+
+    .disabled {
+      background-color: $section-color-primary-dark;
+
+      &:active {
+        background-color: $section-color-primary-dark;
+      }
+
+      &:hover {
+        background-color: $section-color-primary-dark;
+      }
+    }
+  }
+}

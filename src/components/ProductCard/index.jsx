@@ -1,7 +1,4 @@
 import { useState } from "react";
-// import { useDispatch, useSelector } from "react-redux";
-// import { addCartItem, updateCartItem } from "../../core/cart/actions";
-
 import "react-toastify/dist/ReactToastify.css";
 import "./productCard-styles.scss";
 
@@ -58,7 +55,7 @@ function PorductCard({ product, showButtons, notify }) {
         <h3 className="card-title">{product.name}</h3>
         <div className="card-text">
           <p className="card-stock">
-            {showButtons ? <span>Stock: </span> : <span>Cant.: </span>}
+            {showButtons ? "Stock: " : "Cant.: "}
             {product.amount}
           </p>
           <h4 className="card-price">${product.price}</h4>
@@ -88,6 +85,7 @@ function PorductCard({ product, showButtons, notify }) {
             </div>
             <div className="card-button-container">
               <button
+                data-testid="add-to-cart-button"
                 onClick={handleAddToCart}
                 className={`card-button ${
                   product.amount === 0 ? "disabled" : null

@@ -111,8 +111,9 @@ function NewProductForm() {
             name="name"
             value={values.name}
             onChange={handleInputChange}
+            data-testid="input-name"
           />
-          <p>{errors.name}</p>
+          <p data-testid="error-name">{errors.name}</p>
         </label>
 
         <label>
@@ -122,8 +123,9 @@ function NewProductForm() {
             name="price"
             value={values.price}
             onChange={handleInputChange}
+            data-testid="input-price"
           />
-          <p>{errors.price}</p>
+          <p data-testid="error-price">{errors.price}</p>
         </label>
 
         <label>
@@ -133,15 +135,20 @@ function NewProductForm() {
             name="amount"
             value={values.amount}
             onChange={handleInputChange}
+            data-testid="input-amount"
           />
-          <p>{errors.amount}</p>
+          <p data-testid="error-amount">{errors.amount}</p>
         </label>
 
-        <button onClick={handleSubmit} className="form-button">
+        <button
+          onClick={handleSubmit}
+          className="form-button"
+          data-testid="button-save"
+        >
           Guardar Producto
         </button>
       </div>
-      <p className="link-to-home">
+      <p className="link-to-home" data-testid="link-to-home">
         <Link to="/">Volver a la pagina de productos</Link>
       </p>
     </div>

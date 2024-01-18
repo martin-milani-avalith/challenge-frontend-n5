@@ -1,3 +1,5 @@
+import data from "../../products.json";
+
 export const createProductsSlice = (set) => ({
   products: [],
 
@@ -9,8 +11,6 @@ export const createProductsSlice = (set) => ({
       if (storedProducts.length > 0) {
         set({ products: storedProducts });
       } else {
-        const response = await fetch("products.json");
-        const data = await response.json();
         set({ products: data.products });
         localStorage.setItem("products", JSON.stringify(data.products));
       }
